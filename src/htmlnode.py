@@ -13,7 +13,8 @@ class HTMLNode():
     def props_to_html(self):
         if self.props == None:
             return ""
-        return " " + " ".join(list(map(lambda item:'='.join(item),self.props.items())))
+        return " " + " ".join(f'{key}="{value}"' for key, value in self.props.items())
+
         
 
     def __repr__(self):

@@ -9,7 +9,7 @@ class TestHTMLNode(unittest.TestCase):
         
         htmlNode = HTMLNode(props=props)
         
-        expected_output = " hello=brlalal target=blank"
+        expected_output = " hello=\"brlalal\" target=\"blank\""
 
         self.assertEqual(htmlNode.props_to_html(), expected_output)
 

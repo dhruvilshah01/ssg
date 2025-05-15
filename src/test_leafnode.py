@@ -9,7 +9,7 @@ class TestLeafNode(unittest.TestCase):
     
     def test_leaf_to_html_a(self):
         node = LeafNode("a","google.com",props = {"href": "https://google.com"})
-        htmlString = "<a href=https://google.com>google.com</a>"
+        htmlString = "<a href=\"https://google.com\">google.com</a>"
         self.assertEqual(node.to_html(), htmlString)
     
     def test_leaf_to_html_no_value(self):
